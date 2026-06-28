@@ -1,0 +1,291 @@
+/* ============================================================
+   MODALITY PAGE — shared styles for all four modality pages
+   ============================================================ */
+
+/* ── Page header ─────────────────────────────────────────── */
+.modality-header {
+    position: relative;
+    background: linear-gradient(160deg, #A52A2A 0%, #7D1F1F 55%, #5A1515 100%);
+    padding: calc(var(--nav-h) + var(--s-16)) 0 var(--s-16);
+    overflow: hidden;
+}
+
+.modality-header-bg {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 5%;
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+.modality-header-bg svg {
+    width: min(500px, 60vw);
+    height: min(500px, 60vw);
+}
+
+.modality-header .container {
+    position: relative;
+    z-index: 2;
+    max-width: 720px;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: var(--s-2);
+    flex-wrap: wrap;
+    margin-bottom: var(--s-8);
+}
+
+.breadcrumb a,
+.breadcrumb span {
+    font-size: 0.8rem;
+    color: var(--text-on-dark-dim);
+    font-family: var(--font-sans);
+    transition: color var(--t-fast);
+}
+
+.breadcrumb a:hover { color: var(--gold-pale); }
+.breadcrumb [aria-current="page"] { color: var(--gold-pale); font-weight: 500; }
+
+/* Header icon */
+.modality-header-icon {
+    width: 72px;
+    height: 72px;
+    background: rgba(196, 133, 58, 0.15);
+    border-radius: var(--r-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: var(--s-6);
+    border: 1px solid rgba(196, 133, 58, 0.25);
+}
+
+.modality-header-icon svg {
+    width: 42px;
+    height: 42px;
+    color: var(--gold);
+}
+
+.modality-header h1 {
+    color: var(--cream-light);
+    font-style: italic;
+    font-weight: 400;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    margin-bottom: var(--s-5);
+}
+
+.modality-header-desc {
+    color: var(--text-on-dark-dim);
+    font-size: 1.05rem;
+    line-height: 1.75;
+    margin-bottom: var(--s-8);
+    max-width: 58ch;
+}
+
+/* ── Main content ────────────────────────────────────────── */
+.modality-content {
+    padding: var(--s-20) 0;
+    background: var(--warm-white);
+}
+
+.modality-content .container {
+    max-width: 860px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--s-16);
+}
+
+/* Intro block */
+.modality-intro {}
+
+.modality-intro-lead {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 1.2rem;
+    color: var(--crimson);
+    line-height: 1.65;
+    margin-bottom: var(--s-5) !important;
+    max-width: none;
+}
+
+.modality-intro p {
+    max-width: none;
+}
+
+.modality-intro p + p { margin-top: var(--s-4); }
+
+/* Highlight cards grid */
+.modality-highlights {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: var(--s-5);
+}
+
+.highlight-card {
+    padding: 1.75rem var(--s-6);
+    background: var(--cream-light);
+    border-radius: var(--r-lg);
+    border-top: 3px solid var(--gold);
+    transition: transform var(--t-base), box-shadow var(--t-base);
+}
+
+.highlight-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+}
+
+.highlight-card h3 {
+    font-size: 1.05rem;
+    color: var(--crimson);
+    margin-bottom: var(--s-3);
+    font-weight: 600;
+}
+
+.highlight-card p {
+    font-size: 0.9rem;
+    color: var(--text-medium);
+    line-height: 1.7;
+    max-width: none;
+}
+
+/* Conditions list */
+.modality-conditions h2 {
+    font-size: 1.6rem;
+    color: var(--text-dark);
+    margin-bottom: var(--s-6);
+}
+
+.conditions-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--s-3) var(--s-8);
+    list-style: none;
+}
+
+.conditions-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--s-3);
+    font-size: 0.93rem;
+    color: var(--text-medium);
+    line-height: 1.5;
+}
+
+.conditions-list li::before {
+    content: '';
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--gold);
+    flex-shrink: 0;
+    margin-top: 5px;
+}
+
+/* Pull quote (energy medicine page) */
+.modality-pullquote {
+    position: relative;
+    padding: var(--s-10) var(--s-10) var(--s-8);
+    background: var(--crimson);
+    border-radius: var(--r-xl);
+    overflow: hidden;
+}
+
+.modality-pullquote::before {
+    content: '"';
+    position: absolute;
+    top: -0.2em;
+    left: 0.2em;
+    font-family: var(--font-serif);
+    font-size: 8rem;
+    color: var(--gold);
+    opacity: 0.15;
+    line-height: 1;
+    pointer-events: none;
+}
+
+.modality-pullquote p {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 1.1rem;
+    color: rgba(242, 229, 208, 0.92);
+    line-height: 1.8;
+    max-width: none;
+    position: relative;
+    z-index: 1;
+}
+
+.modality-pullquote cite {
+    display: block;
+    margin-top: var(--s-5);
+    font-family: var(--font-sans);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--gold-pale);
+    font-style: normal;
+}
+
+/* CTA block */
+.modality-cta-block {
+    text-align: center;
+    padding: var(--s-12) var(--s-8);
+    background: var(--crimson-bg);
+    border-radius: var(--r-xl);
+    border: 1px solid rgba(125, 31, 31, 0.1);
+}
+
+.modality-cta-block h2 {
+    color: var(--text-dark);
+    margin-bottom: var(--s-4);
+    font-size: 1.8rem;
+}
+
+.modality-cta-block p {
+    color: var(--text-medium);
+    margin: 0 auto var(--s-8);
+    max-width: 54ch;
+}
+
+/* Footer link color override for light footer */
+.footer-bottom a {
+    color: var(--gold-pale);
+    transition: color var(--t-fast);
+}
+
+.footer-bottom a:hover { color: var(--gold); }
+
+/* ── Responsive ──────────────────────────────────────────── */
+@media (max-width: 768px) {
+    .modality-header {
+        padding: calc(var(--nav-h) + var(--s-10)) 0 var(--s-10);
+    }
+
+    .modality-header-bg { opacity: 0.35; }
+
+    .conditions-list {
+        grid-template-columns: 1fr;
+    }
+
+    .modality-content { padding: var(--s-14) 0; }
+    .modality-content .container { gap: var(--s-10); }
+
+    .modality-cta-block {
+        padding: var(--s-8) var(--s-5);
+    }
+
+    .highlight-card {
+        padding: var(--s-6) var(--s-5);
+    }
+}
+
+@media (max-width: 480px) {
+    .modality-header h1 { font-size: 1.9rem; }
+    .modality-highlights { grid-template-columns: 1fr; }
+    .breadcrumb { gap: var(--s-1); }
+}

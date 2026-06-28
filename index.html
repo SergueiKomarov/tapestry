@@ -3,130 +3,699 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tapestry Holistic Healing - Integrative Health Services</title>
+    <title>Tapestry Holistic Healing | Integrative Health &amp; Acupuncture | Lake Oswego, OR</title>
+    <meta name="description" content="Tapestry Holistic Healing offers integrative health care including acupuncture, herbal medicine, functional medicine, women's health, and energy medicine in Lake Oswego, Oregon. Christina Mahoney, LAc, MSTCM, FDN-P.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navigation Bar -->
-    <nav class="navbar">
+
+    <!-- ======================================================
+         NAVIGATION
+         ====================================================== -->
+    <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
         <div class="nav-container">
-            <div class="nav-logo">
-                <span class="logo-text">Tapestry Holistic Healing</span>
-            </div>
-            <div class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#services" class="nav-link">Services</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
+            <a href="/" class="nav-brand" aria-label="Tapestry Holistic Healing — Home">
+                <img src="img/tapesty-holistic-healing-logo.jpg" alt="Tapestry Holistic Healing" class="nav-logo-img">
+                <span class="nav-brand-words" aria-hidden="true">
+                    <span class="nav-brand-main">tapestry</span>
+                    <span class="nav-brand-sub">holistic healing</span>
+                </span>
+            </a>
+            <button class="hamburger" id="hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="navMenu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu" role="list">
+                <li><a href="#home"        class="nav-link">Home</a></li>
+                <li><a href="#modalities"  class="nav-link">Healing Modalities</a></li>
+                <li><a href="#about"       class="nav-link">About</a></li>
+                <li><a href="#faq"         class="nav-link">FAQ</a></li>
+                <li><a href="#contact"     class="nav-link nav-book">Book Now</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <img src="img/forest.png" alt="Wellness and healing" class="hero-image">
-        <div class="hero-content">
-            <h1 class="hero-title">Weaving Wellness into Life</h1>
-            <p class="hero-subtitle">Discover integrative wellness practices designed to restore balance and vitality to your mind, body, and spirit</p>
-            <button class="cta-button" id="ctaButton">Book Your Session</button>
+
+    <!-- ======================================================
+         HERO
+         ====================================================== -->
+    <section class="hero" id="home" aria-label="Welcome">
+
+        <!-- Animated mandala SVG -->
+        <div class="hero-mandala" aria-hidden="true">
+            <svg viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg" class="mandala-svg" focusable="false">
+                <g transform="translate(400 400)">
+
+                    <!-- ── Outer boundary rings ── -->
+                    <circle r="382" fill="none" stroke="#C4853A" stroke-width="1.5" opacity="0.28"/>
+                    <circle r="375" fill="none" stroke="#7D1F1F" stroke-width="0.8" opacity="0.22"/>
+                    <circle r="368" fill="none" stroke="#C4853A" stroke-width="0.5" opacity="0.15"/>
+
+                    <!-- ── Edge petals — 24 petals (15° apart) crimson ── -->
+                    <g fill="#7D1F1F" opacity="0.18">
+                        <ellipse cx="0" cy="-352" rx="9" ry="30"/>
+                        <ellipse cx="0" cy="-352" rx="9" ry="30" transform="rotate(15)"/>
+                        <ellipse cx="0" cy="-352" rx="9" ry="30" transform="rotate(30)"/>
+                        <ellipse cx="0" cy="-352" rx="9" ry="30" transform="rotate(45)"/>
+                        <ellipse cx="0" cy="-352" rx="9" ry="30" transform="rotate(60)"/>
+                        <ellipse cx="0" cy="-352" rx="9" ry="30" transform="rotate(75)"/>
+                        <ellipse cx="0" cy="-352" rx="9" ry="30" transform="rotate(90)"/>
+                        <ellipse cx="0" cy="-352" rx="9" ry="30" transform="rotate(105)"/>
+                        <ellipse cx="0" cy="-352" rx="9" ry="30" transform="rotate(120)"/>
+                        <ellipse cx="0" cy="-352" rx="9" ry="30" transform="rotate(135)"/>
+                        <ellipse cx="0" cy="-352" rx="9" ry="30" transform="rotate(150)"/>
+                        <ellipse cx="0" cy="-352" rx="9" ry="30" transform="rotate(165)"/>
+                        <ellipse cx="0" cy="-352" rx="9" ry="30" transform="rotate(180)"/>
+                        <ellipse cx="0" cy="-352" rx="9" ry="30" transform="rotate(195)"/>
+                        <ellipse cx="0" cy="-352" rx="9" ry="30" transform="rotate(210)"/>
+                        <ellipse cx="0" cy="-352" rx="9" ry="30" transform="rotate(225)"/>
+                        <ellipse cx="0" cy="-352" rx="9" ry="30" transform="rotate(240)"/>
+                        <ellipse cx="0" cy="-352" rx="9" ry="30" transform="rotate(255)"/>
+                        <ellipse cx="0" cy="-352" rx="9" ry="30" transform="rotate(270)"/>
+                        <ellipse cx="0" cy="-352" rx="9" ry="30" transform="rotate(285)"/>
+                        <ellipse cx="0" cy="-352" rx="9" ry="30" transform="rotate(300)"/>
+                        <ellipse cx="0" cy="-352" rx="9" ry="30" transform="rotate(315)"/>
+                        <ellipse cx="0" cy="-352" rx="9" ry="30" transform="rotate(330)"/>
+                        <ellipse cx="0" cy="-352" rx="9" ry="30" transform="rotate(345)"/>
+                    </g>
+
+                    <!-- ── Ring separator ── -->
+                    <circle r="322" fill="none" stroke="#C4853A" stroke-width="1.5" opacity="0.32"/>
+                    <circle r="316" fill="none" stroke="#7D1F1F" stroke-width="0.8" opacity="0.25"/>
+
+                    <!-- ── Outer dot ring — 24 dots ── -->
+                    <g fill="#C4853A" opacity="0.3">
+                        <circle cx="0" cy="-300" r="3"/>
+                        <circle cx="0" cy="-300" r="3" transform="rotate(15)"/>
+                        <circle cx="0" cy="-300" r="3" transform="rotate(30)"/>
+                        <circle cx="0" cy="-300" r="3" transform="rotate(45)"/>
+                        <circle cx="0" cy="-300" r="3" transform="rotate(60)"/>
+                        <circle cx="0" cy="-300" r="3" transform="rotate(75)"/>
+                        <circle cx="0" cy="-300" r="3" transform="rotate(90)"/>
+                        <circle cx="0" cy="-300" r="3" transform="rotate(105)"/>
+                        <circle cx="0" cy="-300" r="3" transform="rotate(120)"/>
+                        <circle cx="0" cy="-300" r="3" transform="rotate(135)"/>
+                        <circle cx="0" cy="-300" r="3" transform="rotate(150)"/>
+                        <circle cx="0" cy="-300" r="3" transform="rotate(165)"/>
+                        <circle cx="0" cy="-300" r="3" transform="rotate(180)"/>
+                        <circle cx="0" cy="-300" r="3" transform="rotate(195)"/>
+                        <circle cx="0" cy="-300" r="3" transform="rotate(210)"/>
+                        <circle cx="0" cy="-300" r="3" transform="rotate(225)"/>
+                        <circle cx="0" cy="-300" r="3" transform="rotate(240)"/>
+                        <circle cx="0" cy="-300" r="3" transform="rotate(255)"/>
+                        <circle cx="0" cy="-300" r="3" transform="rotate(270)"/>
+                        <circle cx="0" cy="-300" r="3" transform="rotate(285)"/>
+                        <circle cx="0" cy="-300" r="3" transform="rotate(300)"/>
+                        <circle cx="0" cy="-300" r="3" transform="rotate(315)"/>
+                        <circle cx="0" cy="-300" r="3" transform="rotate(330)"/>
+                        <circle cx="0" cy="-300" r="3" transform="rotate(345)"/>
+                    </g>
+
+                    <!-- ── Outer petal ring — 16 gold petals ── -->
+                    <g fill="#C4853A" opacity="0.22">
+                        <ellipse cx="0" cy="-268" rx="16" ry="46"/>
+                        <ellipse cx="0" cy="-268" rx="16" ry="46" transform="rotate(22.5)"/>
+                        <ellipse cx="0" cy="-268" rx="16" ry="46" transform="rotate(45)"/>
+                        <ellipse cx="0" cy="-268" rx="16" ry="46" transform="rotate(67.5)"/>
+                        <ellipse cx="0" cy="-268" rx="16" ry="46" transform="rotate(90)"/>
+                        <ellipse cx="0" cy="-268" rx="16" ry="46" transform="rotate(112.5)"/>
+                        <ellipse cx="0" cy="-268" rx="16" ry="46" transform="rotate(135)"/>
+                        <ellipse cx="0" cy="-268" rx="16" ry="46" transform="rotate(157.5)"/>
+                        <ellipse cx="0" cy="-268" rx="16" ry="46" transform="rotate(180)"/>
+                        <ellipse cx="0" cy="-268" rx="16" ry="46" transform="rotate(202.5)"/>
+                        <ellipse cx="0" cy="-268" rx="16" ry="46" transform="rotate(225)"/>
+                        <ellipse cx="0" cy="-268" rx="16" ry="46" transform="rotate(247.5)"/>
+                        <ellipse cx="0" cy="-268" rx="16" ry="46" transform="rotate(270)"/>
+                        <ellipse cx="0" cy="-268" rx="16" ry="46" transform="rotate(292.5)"/>
+                        <ellipse cx="0" cy="-268" rx="16" ry="46" transform="rotate(315)"/>
+                        <ellipse cx="0" cy="-268" rx="16" ry="46" transform="rotate(337.5)"/>
+                    </g>
+                    <!-- 16 crimson inter-petals (offset 11.25°) -->
+                    <g fill="#7D1F1F" opacity="0.18">
+                        <ellipse cx="0" cy="-258" rx="11" ry="32" transform="rotate(11.25)"/>
+                        <ellipse cx="0" cy="-258" rx="11" ry="32" transform="rotate(33.75)"/>
+                        <ellipse cx="0" cy="-258" rx="11" ry="32" transform="rotate(56.25)"/>
+                        <ellipse cx="0" cy="-258" rx="11" ry="32" transform="rotate(78.75)"/>
+                        <ellipse cx="0" cy="-258" rx="11" ry="32" transform="rotate(101.25)"/>
+                        <ellipse cx="0" cy="-258" rx="11" ry="32" transform="rotate(123.75)"/>
+                        <ellipse cx="0" cy="-258" rx="11" ry="32" transform="rotate(146.25)"/>
+                        <ellipse cx="0" cy="-258" rx="11" ry="32" transform="rotate(168.75)"/>
+                        <ellipse cx="0" cy="-258" rx="11" ry="32" transform="rotate(191.25)"/>
+                        <ellipse cx="0" cy="-258" rx="11" ry="32" transform="rotate(213.75)"/>
+                        <ellipse cx="0" cy="-258" rx="11" ry="32" transform="rotate(236.25)"/>
+                        <ellipse cx="0" cy="-258" rx="11" ry="32" transform="rotate(258.75)"/>
+                        <ellipse cx="0" cy="-258" rx="11" ry="32" transform="rotate(281.25)"/>
+                        <ellipse cx="0" cy="-258" rx="11" ry="32" transform="rotate(303.75)"/>
+                        <ellipse cx="0" cy="-258" rx="11" ry="32" transform="rotate(326.25)"/>
+                        <ellipse cx="0" cy="-258" rx="11" ry="32" transform="rotate(348.75)"/>
+                    </g>
+
+                    <!-- ── Ring separator ── -->
+                    <circle r="226" fill="none" stroke="#C4853A" stroke-width="1.5" opacity="0.32"/>
+                    <circle r="220" fill="none" stroke="#7D1F1F" stroke-width="0.8" opacity="0.26"/>
+
+                    <!-- ── Middle dot ring — 16 dots ── -->
+                    <g fill="#C4853A" opacity="0.38">
+                        <circle cx="0" cy="-200" r="3.5"/>
+                        <circle cx="0" cy="-200" r="3.5" transform="rotate(22.5)"/>
+                        <circle cx="0" cy="-200" r="3.5" transform="rotate(45)"/>
+                        <circle cx="0" cy="-200" r="3.5" transform="rotate(67.5)"/>
+                        <circle cx="0" cy="-200" r="3.5" transform="rotate(90)"/>
+                        <circle cx="0" cy="-200" r="3.5" transform="rotate(112.5)"/>
+                        <circle cx="0" cy="-200" r="3.5" transform="rotate(135)"/>
+                        <circle cx="0" cy="-200" r="3.5" transform="rotate(157.5)"/>
+                        <circle cx="0" cy="-200" r="3.5" transform="rotate(180)"/>
+                        <circle cx="0" cy="-200" r="3.5" transform="rotate(202.5)"/>
+                        <circle cx="0" cy="-200" r="3.5" transform="rotate(225)"/>
+                        <circle cx="0" cy="-200" r="3.5" transform="rotate(247.5)"/>
+                        <circle cx="0" cy="-200" r="3.5" transform="rotate(270)"/>
+                        <circle cx="0" cy="-200" r="3.5" transform="rotate(292.5)"/>
+                        <circle cx="0" cy="-200" r="3.5" transform="rotate(315)"/>
+                        <circle cx="0" cy="-200" r="3.5" transform="rotate(337.5)"/>
+                    </g>
+
+                    <!-- ── Middle petal ring — 12 gold petals ── -->
+                    <g fill="#C4853A" opacity="0.28">
+                        <ellipse cx="0" cy="-168" rx="22" ry="55"/>
+                        <ellipse cx="0" cy="-168" rx="22" ry="55" transform="rotate(30)"/>
+                        <ellipse cx="0" cy="-168" rx="22" ry="55" transform="rotate(60)"/>
+                        <ellipse cx="0" cy="-168" rx="22" ry="55" transform="rotate(90)"/>
+                        <ellipse cx="0" cy="-168" rx="22" ry="55" transform="rotate(120)"/>
+                        <ellipse cx="0" cy="-168" rx="22" ry="55" transform="rotate(150)"/>
+                        <ellipse cx="0" cy="-168" rx="22" ry="55" transform="rotate(180)"/>
+                        <ellipse cx="0" cy="-168" rx="22" ry="55" transform="rotate(210)"/>
+                        <ellipse cx="0" cy="-168" rx="22" ry="55" transform="rotate(240)"/>
+                        <ellipse cx="0" cy="-168" rx="22" ry="55" transform="rotate(270)"/>
+                        <ellipse cx="0" cy="-168" rx="22" ry="55" transform="rotate(300)"/>
+                        <ellipse cx="0" cy="-168" rx="22" ry="55" transform="rotate(330)"/>
+                    </g>
+                    <!-- 12 crimson inter-petals (offset 15°) -->
+                    <g fill="#7D1F1F" opacity="0.22">
+                        <ellipse cx="0" cy="-158" rx="14" ry="40" transform="rotate(15)"/>
+                        <ellipse cx="0" cy="-158" rx="14" ry="40" transform="rotate(45)"/>
+                        <ellipse cx="0" cy="-158" rx="14" ry="40" transform="rotate(75)"/>
+                        <ellipse cx="0" cy="-158" rx="14" ry="40" transform="rotate(105)"/>
+                        <ellipse cx="0" cy="-158" rx="14" ry="40" transform="rotate(135)"/>
+                        <ellipse cx="0" cy="-158" rx="14" ry="40" transform="rotate(165)"/>
+                        <ellipse cx="0" cy="-158" rx="14" ry="40" transform="rotate(195)"/>
+                        <ellipse cx="0" cy="-158" rx="14" ry="40" transform="rotate(225)"/>
+                        <ellipse cx="0" cy="-158" rx="14" ry="40" transform="rotate(255)"/>
+                        <ellipse cx="0" cy="-158" rx="14" ry="40" transform="rotate(285)"/>
+                        <ellipse cx="0" cy="-158" rx="14" ry="40" transform="rotate(315)"/>
+                        <ellipse cx="0" cy="-158" rx="14" ry="40" transform="rotate(345)"/>
+                    </g>
+
+                    <!-- ── Inner ring separator ── -->
+                    <circle r="124" fill="none" stroke="#C4853A" stroke-width="1.5" opacity="0.38"/>
+                    <circle r="118" fill="none" stroke="#7D1F1F" stroke-width="0.8" opacity="0.3"/>
+
+                    <!-- ── Inner dot ring — 16 dots ── -->
+                    <g fill="#C4853A" opacity="0.48">
+                        <circle cx="0" cy="-107" r="4"/>
+                        <circle cx="0" cy="-107" r="4" transform="rotate(22.5)"/>
+                        <circle cx="0" cy="-107" r="4" transform="rotate(45)"/>
+                        <circle cx="0" cy="-107" r="4" transform="rotate(67.5)"/>
+                        <circle cx="0" cy="-107" r="4" transform="rotate(90)"/>
+                        <circle cx="0" cy="-107" r="4" transform="rotate(112.5)"/>
+                        <circle cx="0" cy="-107" r="4" transform="rotate(135)"/>
+                        <circle cx="0" cy="-107" r="4" transform="rotate(157.5)"/>
+                        <circle cx="0" cy="-107" r="4" transform="rotate(180)"/>
+                        <circle cx="0" cy="-107" r="4" transform="rotate(202.5)"/>
+                        <circle cx="0" cy="-107" r="4" transform="rotate(225)"/>
+                        <circle cx="0" cy="-107" r="4" transform="rotate(247.5)"/>
+                        <circle cx="0" cy="-107" r="4" transform="rotate(270)"/>
+                        <circle cx="0" cy="-107" r="4" transform="rotate(292.5)"/>
+                        <circle cx="0" cy="-107" r="4" transform="rotate(315)"/>
+                        <circle cx="0" cy="-107" r="4" transform="rotate(337.5)"/>
+                    </g>
+
+                    <!-- ── Inner lotus — 8 gold petals ── -->
+                    <g fill="#C4853A" opacity="0.38">
+                        <ellipse cx="0" cy="-70" rx="20" ry="50"/>
+                        <ellipse cx="0" cy="-70" rx="20" ry="50" transform="rotate(45)"/>
+                        <ellipse cx="0" cy="-70" rx="20" ry="50" transform="rotate(90)"/>
+                        <ellipse cx="0" cy="-70" rx="20" ry="50" transform="rotate(135)"/>
+                        <ellipse cx="0" cy="-70" rx="20" ry="50" transform="rotate(180)"/>
+                        <ellipse cx="0" cy="-70" rx="20" ry="50" transform="rotate(225)"/>
+                        <ellipse cx="0" cy="-70" rx="20" ry="50" transform="rotate(270)"/>
+                        <ellipse cx="0" cy="-70" rx="20" ry="50" transform="rotate(315)"/>
+                    </g>
+                    <!-- 8 crimson inter-petals (offset 22.5°) -->
+                    <g fill="#7D1F1F" opacity="0.3">
+                        <ellipse cx="0" cy="-63" rx="14" ry="36" transform="rotate(22.5)"/>
+                        <ellipse cx="0" cy="-63" rx="14" ry="36" transform="rotate(67.5)"/>
+                        <ellipse cx="0" cy="-63" rx="14" ry="36" transform="rotate(112.5)"/>
+                        <ellipse cx="0" cy="-63" rx="14" ry="36" transform="rotate(157.5)"/>
+                        <ellipse cx="0" cy="-63" rx="14" ry="36" transform="rotate(202.5)"/>
+                        <ellipse cx="0" cy="-63" rx="14" ry="36" transform="rotate(247.5)"/>
+                        <ellipse cx="0" cy="-63" rx="14" ry="36" transform="rotate(292.5)"/>
+                        <ellipse cx="0" cy="-63" rx="14" ry="36" transform="rotate(337.5)"/>
+                    </g>
+
+                    <!-- ── Center circles ── -->
+                    <circle r="38" fill="none" stroke="#C4853A" stroke-width="2"   opacity="0.55"/>
+                    <circle r="30" fill="#7D1F1F"                                  opacity="0.22"/>
+                    <circle r="24" fill="none" stroke="#C4853A" stroke-width="1.5" opacity="0.65"/>
+                    <circle r="16" fill="#C4853A"                                  opacity="0.32"/>
+                    <circle r="9"  fill="#C4853A"                                  opacity="0.65"/>
+                </g>
+            </svg>
         </div>
-        <div class="hero-overlay"></div>
+
+        <div class="hero-overlay" aria-hidden="true"></div>
+
+        <div class="hero-content">
+            <p class="hero-location">Lake Oswego, Oregon</p>
+            <h1 class="hero-title">Weaving Together the<br>Threads of Healing</h1>
+            <p class="hero-subtitle">Where Science, Spirit, and Healing Intertwine</p>
+            <p class="hero-descriptor">Acupuncture &nbsp;·&nbsp; Functional Medicine &nbsp;·&nbsp; Women's Health &nbsp;·&nbsp; Energy Medicine</p>
+            <div class="hero-actions">
+                <a href="#contact" class="btn btn-gold">Book Your Session</a>
+                <a href="#modalities" class="btn btn-outline-cream">Explore Modalities</a>
+            </div>
+        </div>
+
+        <a href="#welcome" class="hero-scroll" aria-label="Scroll to content">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 5v14M5 12l7 7 7-7"/>
+            </svg>
+        </a>
     </section>
 
-    <!-- Services Section -->
-    <section class="services" id="services">
-        <div class="services-container">
-            <h2 class="section-title">My Services</h2>
-            <p class="section-subtitle">Comprehensive wellness solutions for your unique health journey</p>
-            
-            <div class="services-grid">
-                <!-- Service Card 1 -->
-                <div class="service-card">
-                    <div class="card-icon">🌿</div>
-                    <h3 class="card-title">Acupuncture & TCM</h3>
-                    <p class="card-description">Traditional Chinese Medicine practices to balance your body's energy flow and address root causes of imbalance.</p>
-                </div>
 
-                <!-- Service Card 2 -->
-                <div class="service-card">
-                    <div class="card-icon">🧘</div>
-                    <h3 class="card-title">Wellness Coaching</h3>
-                    <p class="card-description">Personalized guidance to help you achieve your health goals through sustainable lifestyle changes and mindful practices.</p>
+    <!-- ======================================================
+         WELCOME / PHILOSOPHY
+         ====================================================== -->
+    <section class="welcome" id="welcome">
+        <div class="container">
+            <div class="welcome-inner">
+                <div class="welcome-emblem">
+                    <img src="img/tapesty-holistic-healing-logo.jpg" alt="" class="welcome-logo-img" aria-hidden="true">
                 </div>
-
-                <!-- Service Card 3 -->
-                <div class="service-card">
-                    <div class="card-icon">💆</div>
-                    <h3 class="card-title">Therapeutic Massage</h3>
-                    <p class="card-description">Healing touch therapies designed to release tension, improve circulation, and promote deep relaxation and recovery.</p>
-                </div>
-
-                <!-- Service Card 4 -->
-                <div class="service-card">
-                    <div class="card-icon">🫀</div>
-                    <h3 class="card-title">Nutritional Counseling</h3>
-                    <p class="card-description">Evidence-based nutrition guidance that supports your unique body type and health goals for optimal wellness.</p>
-                </div>
-
-                <!-- Service Card 5 -->
-                <div class="service-card">
-                    <div class="card-icon">🧠</div>
-                    <h3 class="card-title">Stress & Anxiety Management</h3>
-                    <p class="card-description">Holistic approaches to calm your nervous system, reduce stress, and cultivate mental clarity and emotional resilience.</p>
-                </div>
-
-                <!-- Service Card 6 -->
-                <div class="service-card">
-                    <div class="card-icon">✨</div>
-                    <h3 class="card-title">Holistic Consultations</h3>
-                    <p class="card-description">In-depth wellness assessments that integrate multiple healing modalities to create your personalized health plan.</p>
+                <div class="welcome-text">
+                    <span class="eyebrow">Healing Beyond the Physical</span>
+                    <h2>A Different Kind of Healthcare</h2>
+                    <p class="welcome-lead">At Tapestry Holistic Healing, I believe that true healing extends beyond the physical body. Just as a tapestry is woven from many interconnected threads, our wellbeing is influenced not only by our physical health, but also by our emotional, mental, energetic, and spiritual health.</p>
+                    <p>When one area becomes out of balance, it can affect the whole. While modern healthcare often focuses primarily on physical symptoms, many people intuitively recognize that stress, grief, trauma, life transitions, relationships, purpose, and spiritual connection can profoundly influence how we feel.</p>
+                    <div class="welcome-pillars" aria-label="Five dimensions of wellbeing">
+                        <div class="pillar">
+                            <span class="pillar-dot" aria-hidden="true"></span>
+                            <span>Physical</span>
+                        </div>
+                        <div class="pillar">
+                            <span class="pillar-dot" aria-hidden="true"></span>
+                            <span>Emotional</span>
+                        </div>
+                        <div class="pillar">
+                            <span class="pillar-dot" aria-hidden="true"></span>
+                            <span>Mental</span>
+                        </div>
+                        <div class="pillar">
+                            <span class="pillar-dot" aria-hidden="true"></span>
+                            <span>Energetic</span>
+                        </div>
+                        <div class="pillar">
+                            <span class="pillar-dot" aria-hidden="true"></span>
+                            <span>Spiritual</span>
+                        </div>
+                    </div>
+                    <a href="#modalities" class="btn btn-crimson">Discover Your Path</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Footer -->
-    <footer class="footer" id="contact">
-        <div class="footer-container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3 class="footer-title">Wellness & Vitality</h3>
-                    <p class="footer-text">Empowering you to achieve optimal health through integrative, evidence-based wellness practices.</p>
-                </div>
 
-                <div class="footer-section">
-                    <h4 class="footer-subtitle">Hours</h4>
-                    <p class="footer-text">Monday - Thursday: 9:00 AM - 6:00 PM</p>
-                    <p class="footer-text">Friday: 9:00 AM - 5:00 PM</p>
-                    <p class="footer-text">Saturday: By appointment</p>
-                </div>
+    <!-- ======================================================
+         HEALING MODALITIES
+         ====================================================== -->
+    <section class="modalities" id="modalities">
+        <div class="container">
+            <div class="section-header">
+                <span class="eyebrow eyebrow--light">Paths to Wholeness</span>
+                <h2 class="section-title">Healing Modalities</h2>
+                <p class="section-subtitle">Comprehensive, integrative approaches woven together to support your unique healing journey</p>
+            </div>
 
-                <div class="footer-section">
-                    <h4 class="footer-subtitle">Contact</h4>
-                    <p class="footer-text">📍 456 Wellness Lane, Health City, HC 67890</p>
-                    <p class="footer-text">📞 (555) 987-6543</p>
-                    <p class="footer-text">✉️ hello@wellnessandvitality.com</p>
-                </div>
+            <div class="modalities-grid">
 
-                <div class="footer-section">
-                    <h4 class="footer-subtitle">Follow Us</h4>
-                    <div class="social-links">
-                        <a href="#" class="social-link">Instagram</a>
-                        <a href="#" class="social-link">Facebook</a>
-                        <a href="#" class="social-link">LinkedIn</a>
+                <!-- Acupuncture & Herbal Medicine -->
+                <a href="acupuncture.html" class="modality-card" aria-label="Acupuncture and Herbal Medicine — Learn More">
+                    <div class="modality-icon-wrap" aria-hidden="true">
+                        <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Lotus petals -->
+                            <ellipse cx="28" cy="19" rx="5.5" ry="12" fill="currentColor" opacity="0.75"/>
+                            <ellipse cx="18.5" cy="24" rx="5" ry="10.5" transform="rotate(-38 18.5 24)" fill="currentColor" opacity="0.65"/>
+                            <ellipse cx="37.5" cy="24" rx="5" ry="10.5" transform="rotate(38 37.5 24)" fill="currentColor" opacity="0.65"/>
+                            <ellipse cx="12" cy="32" rx="4" ry="8.5" transform="rotate(-68 12 32)" fill="currentColor" opacity="0.45"/>
+                            <ellipse cx="44" cy="32" rx="4" ry="8.5" transform="rotate(68 44 32)" fill="currentColor" opacity="0.45"/>
+                            <!-- Center -->
+                            <circle cx="28" cy="28" r="5.5" fill="currentColor"/>
+                            <!-- Needle -->
+                            <line x1="28" y1="33.5" x2="28" y2="50" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            <rect x="24.5" y="48" width="7" height="2.5" rx="1.25" fill="currentColor" opacity="0.7"/>
+                        </svg>
+                    </div>
+                    <h3>Acupuncture &amp; Herbal Medicine</h3>
+                    <p>Traditional Chinese Medicine practices to balance your body's energy flow, address root causes of pain, and support whole-body health through needles, herbs, and centuries of wisdom.</p>
+                    <span class="modality-link" aria-hidden="true">Learn More <span class="arrow">→</span></span>
+                </a>
+
+                <!-- Functional Medicine -->
+                <a href="functional-medicine.html" class="modality-card" aria-label="Functional Medicine — Learn More">
+                    <div class="modality-icon-wrap" aria-hidden="true">
+                        <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Magnifying glass -->
+                            <circle cx="23" cy="23" r="15" stroke="currentColor" stroke-width="2" fill="none" opacity="0.9"/>
+                            <!-- Leaf / root cause symbol inside -->
+                            <path d="M 19 27 Q 23 17 27 22 Q 23 32 19 27 Z" fill="currentColor" opacity="0.75"/>
+                            <line x1="23" y1="24.5" x2="23" y2="30" stroke="currentColor" stroke-width="1" stroke-linecap="round" opacity="0.6"/>
+                            <!-- Handle -->
+                            <line x1="34" y1="34" x2="50" y2="50" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" opacity="0.9"/>
+                        </svg>
+                    </div>
+                    <h3>Functional Medicine</h3>
+                    <p>A personalized, root-cause approach that connects the threads — exploring how hormones, digestion, nutrition, sleep, stress, and lifestyle all contribute to how you feel and function.</p>
+                    <span class="modality-link" aria-hidden="true">Learn More <span class="arrow">→</span></span>
+                </a>
+
+                <!-- Women's Health -->
+                <a href="womens-health.html" class="modality-card" aria-label="Women's Health — Learn More">
+                    <div class="modality-icon-wrap" aria-hidden="true">
+                        <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Outer ring -->
+                            <circle cx="28" cy="22" r="14" stroke="currentColor" stroke-width="2" fill="none" opacity="0.85"/>
+                            <!-- Inner lotus -->
+                            <ellipse cx="28" cy="20" rx="4" ry="8.5" fill="currentColor" opacity="0.65"/>
+                            <ellipse cx="21.5" cy="24" rx="4" ry="7.5" transform="rotate(-35 21.5 24)" fill="currentColor" opacity="0.6"/>
+                            <ellipse cx="34.5" cy="24" rx="4" ry="7.5" transform="rotate(35 34.5 24)" fill="currentColor" opacity="0.6"/>
+                            <circle cx="28" cy="24.5" r="4" fill="currentColor"/>
+                            <!-- Vertical stem and cross bar -->
+                            <line x1="28" y1="36" x2="28" y2="50" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <line x1="22" y1="44" x2="34" y2="44" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3>Women's Health</h3>
+                    <p>Specialized support for fertility, IVF preparation, perimenopause, menopause, hormonal balance, and all stages of a woman's health journey through compassionate, integrative care.</p>
+                    <span class="modality-link" aria-hidden="true">Learn More <span class="arrow">→</span></span>
+                </a>
+
+                <!-- Energy Medicine -->
+                <a href="energy-medicine.html" class="modality-card" aria-label="Energy Medicine — Learn More">
+                    <div class="modality-icon-wrap" aria-hidden="true">
+                        <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Left hand -->
+                            <path d="M 15 38 Q 12 28 17 21 Q 19.5 17 22 21 L 22 31" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"/>
+                            <!-- Right hand -->
+                            <path d="M 41 38 Q 44 28 39 21 Q 36.5 17 34 21 L 34 31" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"/>
+                            <!-- Energy waves emanating from center -->
+                            <path d="M 22 20 Q 28 14 34 20" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.6"/>
+                            <path d="M 20 26 Q 28 19 36 26" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.7"/>
+                            <path d="M 19 32 Q 28 25 37 32" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.8"/>
+                            <!-- Center energy point -->
+                            <circle cx="28" cy="29" r="4.5" fill="currentColor" opacity="0.65"/>
+                            <circle cx="28" cy="29" r="2"   fill="currentColor" opacity="0.9"/>
+                        </svg>
+                    </div>
+                    <h3>Energy Medicine</h3>
+                    <p>A gentle yet powerful healing modality working with the body's subtle energetic systems to support balance, emotional healing, stress relief, and profound transformation.</p>
+                    <span class="modality-link" aria-hidden="true">Learn More <span class="arrow">→</span></span>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ======================================================
+         ABOUT CHRISTINA
+         ====================================================== -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-inner">
+                <div class="about-text">
+                    <span class="eyebrow">Meet Your Practitioner</span>
+                    <h2>Christina Mahoney<span class="credentials">, LAc, MSTCM, FDN-P</span></h2>
+                    <p class="about-lead">My path into holistic medicine began with my own search for answers.</p>
+                    <p>As a teenager and young adult, I struggled with painful periods, chronic fatigue, digestive issues, and insomnia — yet often felt that my concerns were being managed rather than truly understood. Those experiences sparked a lifelong passion for uncovering the root causes of illness and helping others find a more personalized path to healing.</p>
+                    <p>For nearly 24 years, I have helped patients improve their health through acupuncture, herbal medicine, functional medicine, and energy healing. I hold a Master's degree in Traditional Chinese Medicine from the American College of Traditional Chinese Medicine in San Francisco, and am also a Functional Diagnostic Nutrition Practitioner (FDN-P).</p>
+                    <p>I founded Tapestry Holistic Healing because I believe healing is rarely about one thing alone. Like the threads of a tapestry, our physical, emotional, mental, and spiritual health are interconnected. When we address the whole person, meaningful transformation becomes possible.</p>
+                    <div class="about-credentials" aria-label="Credentials and experience">
+                        <div class="credential-item">
+                            <span class="credential-badge">2002</span>
+                            <span class="credential-desc">MSTCM — American College of Traditional Chinese Medicine, San Francisco</span>
+                        </div>
+                        <div class="credential-item">
+                            <span class="credential-badge">24+</span>
+                            <span class="credential-desc">Years of clinical practice across California and Oregon</span>
+                        </div>
+                        <div class="credential-item">
+                            <span class="credential-badge">FDN-P</span>
+                            <span class="credential-desc">Functional Diagnostic Nutrition Practitioner</span>
+                        </div>
+                        <div class="credential-item">
+                            <span class="credential-badge">20yr</span>
+                            <span class="credential-desc">ABORM Fellow &amp; Fertility Specialist</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-side">
+                    <blockquote class="about-quote">
+                        <svg class="quote-mark" viewBox="0 0 40 32" fill="currentColor" aria-hidden="true">
+                            <path d="M 0 32 L 0 16 Q 0 0 16 0 L 16 8 Q 8 8 8 16 L 16 16 L 16 32 Z M 22 32 L 22 16 Q 22 0 38 0 L 38 8 Q 30 8 30 16 L 38 16 L 38 32 Z"/>
+                        </svg>
+                        <p>The name Tapestry Holistic Healing reflects this philosophy. A tapestry is created by weaving many individual threads together to form something stronger, richer, and more beautiful than any single thread alone. In much the same way, our health is influenced by physical, emotional, mental, and spiritual factors that are deeply interconnected.</p>
+                        <cite>— Christina Mahoney, LAc</cite>
+                    </blockquote>
+                    <div class="about-location">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                            <circle cx="12" cy="10" r="3"/>
+                        </svg>
+                        <div>
+                            <strong>Lake Oswego, Oregon</strong>
+                            <span>Serving Lake Oswego, West Linn, Tualatin, Tigard, Portland &amp; surrounding communities</span>
+                        </div>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+
+    <!-- ======================================================
+         FAQ
+         ====================================================== -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <span class="eyebrow">Common Questions</span>
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-subtitle">Everything you need to know before your first appointment</p>
+            </div>
+            <div class="faq-grid">
+
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <span>What conditions do you commonly work with?</span>
+                        <span class="faq-chevron" aria-hidden="true">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                        </span>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Acupuncture may help support a wide variety of health concerns, including chronic and acute pain, neck, back, shoulder, hip and knee pain, headaches and migraines, fertility support, hormone imbalances, PMS and painful periods, perimenopause and menopause, digestive concerns, stress and anxiety, insomnia and sleep issues, fatigue and burnout, and metabolic health concerns.</p>
+                        <p>If you are unsure whether your condition is a good fit, please reach out.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <span>Does acupuncture hurt?</span>
+                        <span class="faq-chevron" aria-hidden="true">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                        </span>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Most people find acupuncture much more comfortable than they expect. The needles are extremely thin — far finer than a hypodermic needle — and many patients barely feel them being inserted.</p>
+                        <p>You may notice sensations such as warmth, tingling, heaviness, or gentle movement around a point. Many patients become so relaxed that they fall asleep during treatment.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <span>What makes Functional Medicine different?</span>
+                        <span class="faq-chevron" aria-hidden="true">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                        </span>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Functional Medicine is a personalized approach to health that focuses on identifying and addressing potential root causes rather than simply managing symptoms. By exploring the relationships between hormones, digestion, nutrition, sleep, stress, metabolism, and lifestyle, we gain a clearer picture of what may be contributing to imbalance — and where meaningful opportunities for healing exist.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <span>Do you work with fertility patients?</span>
+                        <span class="faq-chevron" aria-hidden="true">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                        </span>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Yes. Fertility support has been a major focus of my work for more than 20 years. Care may include acupuncture, functional testing recommendations, nutrition, supplements, cycle tracking, IVF support, and preconception health optimization. Acupuncture is commonly used to support relaxation, stress management, nervous system regulation, and overall reproductive health throughout the fertility journey.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <span>Do you accept insurance?</span>
+                        <span class="faq-chevron" aria-hidden="true">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                        </span>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Tapestry Holistic Healing is currently in network with Regence. If you do not have Regence and your insurance plan offers out-of-network acupuncture benefits, a superbill can be provided for possible reimbursement. HSA and FSA cards are accepted for eligible services.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <span>What is Energy Medicine?</span>
+                        <span class="faq-chevron" aria-hidden="true">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                        </span>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Energy Medicine is a gentle healing modality that works with the body's energetic systems to support balance, relaxation, and wellbeing. Some people seek Energy Medicine for stress reduction and emotional healing. Others are interested in personal growth, spiritual development, or navigating major life transitions. Energy Medicine can be received on its own or combined with an acupuncture treatment. You do not need to be spiritually oriented to benefit.</p>
+                    </div>
+                </details>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ======================================================
+         BOOK CTA
+         ====================================================== -->
+    <section class="book-cta" id="book" aria-labelledby="cta-heading">
+        <div class="book-cta-mandala" aria-hidden="true">
+            <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" focusable="false">
+                <g transform="translate(200 200)">
+                    <circle r="190" fill="none" stroke="#C4853A" stroke-width="1"   opacity="0.2"/>
+                    <circle r="180" fill="none" stroke="#7D1F1F" stroke-width="0.5" opacity="0.15"/>
+                    <g fill="#C4853A" opacity="0.12">
+                        <ellipse cx="0" cy="-155" rx="14" ry="40"/>
+                        <ellipse cx="0" cy="-155" rx="14" ry="40" transform="rotate(30)"/>
+                        <ellipse cx="0" cy="-155" rx="14" ry="40" transform="rotate(60)"/>
+                        <ellipse cx="0" cy="-155" rx="14" ry="40" transform="rotate(90)"/>
+                        <ellipse cx="0" cy="-155" rx="14" ry="40" transform="rotate(120)"/>
+                        <ellipse cx="0" cy="-155" rx="14" ry="40" transform="rotate(150)"/>
+                        <ellipse cx="0" cy="-155" rx="14" ry="40" transform="rotate(180)"/>
+                        <ellipse cx="0" cy="-155" rx="14" ry="40" transform="rotate(210)"/>
+                        <ellipse cx="0" cy="-155" rx="14" ry="40" transform="rotate(240)"/>
+                        <ellipse cx="0" cy="-155" rx="14" ry="40" transform="rotate(270)"/>
+                        <ellipse cx="0" cy="-155" rx="14" ry="40" transform="rotate(300)"/>
+                        <ellipse cx="0" cy="-155" rx="14" ry="40" transform="rotate(330)"/>
+                    </g>
+                    <circle r="115" fill="none" stroke="#C4853A" stroke-width="1" opacity="0.2"/>
+                    <g fill="#7D1F1F" opacity="0.12">
+                        <ellipse cx="0" cy="-88" rx="16" ry="42"/>
+                        <ellipse cx="0" cy="-88" rx="16" ry="42" transform="rotate(45)"/>
+                        <ellipse cx="0" cy="-88" rx="16" ry="42" transform="rotate(90)"/>
+                        <ellipse cx="0" cy="-88" rx="16" ry="42" transform="rotate(135)"/>
+                        <ellipse cx="0" cy="-88" rx="16" ry="42" transform="rotate(180)"/>
+                        <ellipse cx="0" cy="-88" rx="16" ry="42" transform="rotate(225)"/>
+                        <ellipse cx="0" cy="-88" rx="16" ry="42" transform="rotate(270)"/>
+                        <ellipse cx="0" cy="-88" rx="16" ry="42" transform="rotate(315)"/>
+                    </g>
+                    <circle r="45" fill="none" stroke="#C4853A" stroke-width="1" opacity="0.25"/>
+                    <circle r="20" fill="#C4853A" opacity="0.1"/>
+                    <circle r="8"  fill="#C4853A" opacity="0.2"/>
+                </g>
+            </svg>
+        </div>
+        <div class="container">
+            <div class="book-cta-content">
+                <span class="eyebrow eyebrow--light">Begin Your Healing Journey</span>
+                <h2 id="cta-heading">Ready to Weave a New Thread?</h2>
+                <p>Schedule your first appointment. Together, we will review your health history, discuss your goals, and create a personalized plan to support your health and wellbeing.</p>
+                <div class="book-cta-actions">
+                    <a href="#contact" class="btn btn-gold">Book Your First Appointment</a>
+                    <a href="https://us.fullscript.com/welcome/cmahoney1665860134" target="_blank" rel="noopener noreferrer" class="btn btn-outline-cream">Patient Supplement Dispensary</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ======================================================
+         FOOTER / CONTACT
+         ====================================================== -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-grid">
+
+                <div class="footer-brand">
+                    <img src="img/tapesty-holistic-healing-logo.jpg" alt="Tapestry Holistic Healing" class="footer-logo">
+                    <p class="footer-tagline">Honoring the Unique Tapestry of Your Health</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Follow us on Instagram" class="social-icon-link">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Follow us on Facebook" class="social-icon-link">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4 class="footer-heading">Healing Modalities</h4>
+                    <ul class="footer-links">
+                        <li><a href="acupuncture.html">Acupuncture &amp; Herbal Medicine</a></li>
+                        <li><a href="functional-medicine.html">Functional Medicine</a></li>
+                        <li><a href="womens-health.html">Women's Health</a></li>
+                        <li><a href="energy-medicine.html">Energy Medicine</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4 class="footer-heading">Office Hours</h4>
+                    <ul class="footer-hours">
+                        <li><span>Mon – Thu</span><span>9:00 AM – 6:00 PM</span></li>
+                        <li><span>Friday</span><span>9:00 AM – 5:00 PM</span></li>
+                        <li><span>Saturday</span><span>By appointment</span></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4 class="footer-heading">Location &amp; Contact</h4>
+                    <address class="footer-address">
+                        <p>Lake Oswego, Oregon</p>
+                        <p>Serving the greater Portland area</p>
+                    </address>
+                    <ul class="footer-meta">
+                        <li>In network with Regence</li>
+                        <li>HSA &amp; FSA accepted</li>
+                        <li>Superbill available for out-of-network</li>
+                    </ul>
+                </div>
+
+            </div>
 
             <div class="footer-bottom">
-                <p>&copy; <script>document.write(new Date().getFullYear())</script> Tapestry Holistic Healing. All rights reserved.</p>            
+                <p>&copy; <script>document.write(new Date().getFullYear())</script> Tapestry Holistic Healing &nbsp;·&nbsp; Christina Mahoney, LAc, MSTCM, FDN-P &nbsp;·&nbsp; Lake Oswego, Oregon</p>
             </div>
         </div>
     </footer>
+
 
     <script src="script.js"></script>
 </body>

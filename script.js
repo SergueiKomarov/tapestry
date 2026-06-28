@@ -1,158 +1,123 @@
-// ===========================
-// NAVIGATION MENU TOGGLE
-// ===========================
+// ============================================================
+// TAPESTRY HOLISTIC HEALING — MAIN SCRIPT
+// ============================================================
 
-const hamburger = document.getElementById('hamburger');
-const navMenu = document.getElementById('navMenu');
+(function () {
+    'use strict';
 
-// Toggle mobile menu when hamburger is clicked
-hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
-    navMenu.classList.toggle('active');
-});
+    // ── Nav scroll effect ──────────────────────────────────────
+    const navbar = document.getElementById('navbar');
 
-// Close mobile menu when a nav link is clicked
-const navLinks = document.querySelectorAll('.nav-link');
-navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-        hamburger.classList.remove('active');
-        navMenu.classList.remove('active');
-    });
-});
-
-// ===========================
-// CTA BUTTON FUNCTIONALITY
-// ===========================
-
-const ctaButton = document.getElementById('ctaButton');
-
-ctaButton.addEventListener('click', () => {
-    // Scroll to contact section
-    const contactSection = document.querySelector('#contact');
-    contactSection.scrollIntoView({ behavior: 'smooth' });
-    
-    // Visual feedback
-    ctaButton.style.transform = 'scale(0.95)';
-    setTimeout(() => {
-        ctaButton.style.transform = 'scale(1)';
-    }, 100);
-});
-
-// ===========================
-// SCROLL ANIMATIONS
-// ===========================
-
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -100px 0px'
-};
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.animation = 'fadeInUp 0.6s ease-out forwards';
-            observer.unobserve(entry.target);
+    function updateNavbar() {
+        if (window.scrollY > 40) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
         }
-    });
-}, observerOptions);
-
-// Observe service cards for scroll animation
-const serviceCards = document.querySelectorAll('.service-card');
-serviceCards.forEach(card => {
-    observer.observe(card);
-});
-
-// ===========================
-// NAVBAR SCROLL EFFECT
-// ===========================
-
-let lastScrollTop = 0;
-const navbar = document.querySelector('.navbar');
-
-window.addEventListener('scroll', () => {
-    let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-    
-    // Add shadow on scroll
-    if (currentScroll > 50) {
-        navbar.style.boxShadow = '0 10px 35px rgba(0, 0, 0, 0.2)';
-    } else {
-        navbar.style.boxShadow = '0 10px 35px rgba(0, 0, 0, 0.1)';
     }
-    
-    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
-});
 
-// ===========================
-// SMOOTH SCROLL POLYFILL
-// ===========================
+    window.addEventListener('scroll', updateNavbar, { passive: true });
+    updateNavbar(); // run on load
 
-// Fallback for browsers that don't support smooth scroll
-if (!window.CSS || !window.CSS.supports('scroll-behavior: smooth')) {
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'auto',
-                    block: 'start'
-                });
-            }
+
+    // ── Mobile hamburger ───────────────────────────────────────
+    const hamburger = document.getElementById('hamburger');
+    const navMenu   = document.getElementById('navMenu');
+
+    hamburger.addEventListener('click', () => {
+        const isOpen = navMenu.classList.toggle('open');
+        hamburger.classList.toggle('active', isOpen);
+        hamburger.setAttribute('aria-expanded', String(isOpen));
+        hamburger.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
+        document.body.style.overflow = isOpen ? 'hidden' : '';
+    });
+
+    // Close menu when a nav link is clicked
+    navMenu.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+            navMenu.classList.remove('open');
+            hamburger.classList.remove('active');
+            hamburger.setAttribute('aria-expanded', 'false');
+            hamburger.setAttribute('aria-label', 'Open navigation menu');
+            document.body.style.overflow = '';
         });
     });
-}
 
-// ===========================
-// FORM INTERACTION (Future Enhancement)
-// ===========================
-
-// This function can be used when you add a contact form
-function handleFormSubmit(e) {
-    e.preventDefault();
-    // Add your form submission logic here
-    console.log('Form submitted');
-    // Example: Show success message
-    alert('Thank you for reaching out! I will get back to you soon.');
-}
-
-// ===========================
-// UTILITY FUNCTIONS
-// ===========================
-
-// Add active state to current nav link based on scroll position
-function updateActiveNavLink() {
-    const sections = document.querySelectorAll('section');
-    const navLinks = document.querySelectorAll('.nav-link');
-    
-    let current = '';
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        if (scrollY >= sectionTop - 200) {
-            current = section.getAttribute('id');
+    // Close on Escape
+    document.addEventListener('keydown', e => {
+        if (e.key === 'Escape' && navMenu.classList.contains('open')) {
+            navMenu.classList.remove('open');
+            hamburger.classList.remove('active');
+            hamburger.setAttribute('aria-expanded', 'false');
+            document.body.style.overflow = '';
+            hamburger.focus();
         }
     });
-    
-    navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href').slice(1) === current) {
-            link.classList.add('active');
-        }
+
+
+    // ── Active nav link tracking ───────────────────────────────
+    const sections  = document.querySelectorAll('section[id]');
+    const navLinks  = document.querySelectorAll('.nav-link[href^="#"]');
+
+    function updateActiveLink() {
+        let currentId = '';
+        sections.forEach(section => {
+            const top = section.offsetTop - (navbar.offsetHeight + 80);
+            if (window.scrollY >= top) {
+                currentId = section.id;
+            }
+        });
+        navLinks.forEach(link => {
+            const href = link.getAttribute('href').slice(1);
+            link.classList.toggle('active', href === currentId);
+        });
+    }
+
+    window.addEventListener('scroll', updateActiveLink, { passive: true });
+
+
+    // ── Scroll reveal (IntersectionObserver) ───────────────────
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        const revealEls = document.querySelectorAll(
+            '.modality-card, .credential-item, .faq-item, .welcome-inner, .about-inner'
+        );
+
+        revealEls.forEach((el, i) => {
+            el.classList.add('reveal');
+            // Stagger cards within a grid
+            const siblings = el.parentElement.querySelectorAll(':scope > .reveal');
+            const idx = Array.from(siblings).indexOf(el);
+            if (idx > 0 && idx <= 3) {
+                el.classList.add(`reveal-delay-${idx}`);
+            }
+        });
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.08,
+            rootMargin: '0px 0px -60px 0px'
+        });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    }
+
+
+    // ── Smooth scroll for anchor links ────────────────────────
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            const target = document.querySelector(this.getAttribute('href'));
+            if (!target) return;
+            e.preventDefault();
+            const offset = navbar.offsetHeight + 8;
+            const top = target.getBoundingClientRect().top + window.scrollY - offset;
+            window.scrollTo({ top, behavior: 'smooth' });
+        });
     });
-}
 
-window.addEventListener('scroll', updateActiveNavLink);
-
-// ===========================
-// PAGE LOAD ANIMATION
-// ===========================
-
-window.addEventListener('load', () => {
-    document.body.style.opacity = '1';
-});
-
-// Initialize
-document.addEventListener('DOMContentLoaded', () => {
-    // Add any initialization code here
-    console.log('Wellness & Vitality website loaded successfully');
-});
+})();
