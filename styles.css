@@ -166,14 +166,14 @@ p {
 .btn:active { transform: translateY(1px) scale(0.985); }
 
 .btn-gold {
-    background: linear-gradient(135deg, var(--gold) 0%, #B8762E 100%);
+    background: #ea8207;
     color: #FEFBF7;
     border-color: transparent;
-    box-shadow: var(--shadow-gold);
+    box-shadow: 0 8px 28px rgba(234, 130, 7, 0.32);
 }
 .btn-gold:hover {
-    background: linear-gradient(135deg, #D4956A 0%, var(--gold) 100%);
-    box-shadow: 0 12px 36px rgba(196, 133, 58, 0.45);
+    background: #d57306;
+    box-shadow: 0 12px 36px rgba(234, 130, 7, 0.45);
     transform: translateY(-2px);
     color: #FEFBF7;
 }
@@ -358,20 +358,21 @@ p {
 
 /* Book Now button in nav */
 .nav-book {
-    background: linear-gradient(135deg, var(--gold) 0%, #B8762E 100%);
+    background: #ea8207;
     color: var(--warm-white) !important;
     padding: var(--s-2) var(--s-5);
     border-radius: var(--r-full);
     font-weight: 700;
-    box-shadow: var(--shadow-gold);
-    transition: transform var(--t-base), box-shadow var(--t-base) !important;
+    box-shadow: 0 4px 16px rgba(234, 130, 7, 0.3);
+    transition: transform var(--t-base), box-shadow var(--t-base), background var(--t-base) !important;
 }
 
 .nav-book::after { display: none; }
 
 .nav-book:hover {
+    background: #d57306 !important;
     transform: translateY(-1px);
-    box-shadow: 0 8px 24px rgba(196, 133, 58, 0.45) !important;
+    box-shadow: 0 8px 24px rgba(234, 130, 7, 0.45) !important;
     color: var(--warm-white) !important;
 }
 
@@ -680,27 +681,29 @@ p {
     outline-offset: 4px;
 }
 
-/* Modality icon */
-.modality-icon-wrap {
-    width: 64px;
-    height: 64px;
-    border-radius: var(--r-md);
-    background: var(--crimson-bg);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/* Mandala background per tile */
+.modality-mandala {
+    position: absolute;
+    bottom: -30px;
+    right: -30px;
+    width: 260px;
+    height: 260px;
+    pointer-events: none;
+    color: var(--gold);
+    opacity: 0.07;
+    transition: opacity var(--t-slow);
+}
+
+.modality-card:hover .modality-mandala { opacity: 0.13; }
+
+/* Small accent bar replacing icon */
+.card-accent {
+    width: 44px;
+    height: 3px;
+    background: linear-gradient(to right, var(--crimson), var(--gold));
+    border-radius: 2px;
+    margin-bottom: var(--s-1);
     flex-shrink: 0;
-    transition: background var(--t-base);
-}
-
-.modality-card:hover .modality-icon-wrap {
-    background: rgba(125, 31, 31, 0.12);
-}
-
-.modality-icon-wrap svg {
-    width: 38px;
-    height: 38px;
-    color: var(--crimson);
 }
 
 /* Card text */
@@ -1379,6 +1382,5 @@ p {
     .section-header { margin-bottom: var(--s-8); }
 
     .modality-card { padding: var(--s-6) var(--s-5); }
-    .modality-icon-wrap { width: 52px; height: 52px; }
-    .modality-icon-wrap svg { width: 30px; height: 30px; }
+    .modality-mandala { width: 180px; height: 180px; }
 }
