@@ -92,6 +92,17 @@
     margin-bottom: var(--s-4);
 }
 
+.blog-post-body h3 {
+    font-size: 1.2rem;
+    color: var(--crimson);
+    margin-top: var(--s-8);
+    margin-bottom: var(--s-3);
+}
+
+.blog-post-body .conditions-list {
+    margin-bottom: var(--s-6);
+}
+
 .blog-post-body .modality-intro-lead {
     margin-bottom: var(--s-6) !important;
 }
