@@ -1055,6 +1055,12 @@ p {
 
 .faq-answer p + p { margin-top: var(--s-3); }
 
+.faq-answer p a {
+    color: var(--crimson);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
 /* ============================================================
    BOOK CTA
    ============================================================ */

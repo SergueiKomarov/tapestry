@@ -1,0 +1,9 @@
+# SEO maintenance and launch checklist
+
+Run `python3 tests/check_seo.py` after adding or changing pages. Give each indexable page a unique title and description, a canonical URL, social metadata, and appropriate structured data; link it from relevant pages and include its canonical URL in `sitemap.xml`. Add a sitemap `lastmod` only when the actual date of a substantive update is known. Keep social images publicly accessible and use only approved assets.
+
+Before merging the SEO changes, the practice owner should verify the displayed business details and permission to use the preview image, and the practitioner should review fertility content and health claims. The current robots policy permits all crawlers, including AI training crawlers; decide separately whether training crawlers should be restricted before changing that policy.
+
+After deployment, verify HTTPS and preferred-host redirects, page status codes, canonical tags, `robots.txt`, the sitemap, robots headers and preview-image access. Inspect URLs and submit the sitemap in Google Search Console; check applicable structured data with Google's Rich Results Test and Schema Markup Validator, and review social previews and mobile performance. Azure or domain settings may need changes if redirects do not converge on the preferred host.
+
+An authorized owner should verify and complete the Google Business Profile, including accurate categories, services, hours, photos and booking link, and reconcile reputable directory listings. Ask for honest reviews without incentives and avoid disclosing patient details in replies. Track Search Console queries and landing pages, Business Profile interactions and privacy-conscious appointment conversions. Record repeatable Lake Oswego organic and map-pack observations separately; rankings and rich results are not guaranteed.
