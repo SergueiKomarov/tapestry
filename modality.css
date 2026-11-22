@@ -119,6 +119,13 @@
 
 .modality-intro p + p { margin-top: var(--s-4); }
 
+.modality-content p a {
+    color: var(--crimson);
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
 /* Highlight cards grid */
 .modality-highlights {
     display: grid;
@@ -158,6 +165,11 @@
     font-size: 1.6rem;
     color: var(--text-dark);
     margin-bottom: var(--s-6);
+}
+
+.modality-conditions p + p,
+.modality-conditions p + h2 {
+    margin-top: var(--s-5);
 }
 
 .conditions-list {
